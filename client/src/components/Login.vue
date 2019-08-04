@@ -70,6 +70,8 @@ export default {
         email: this.email,
         password: this.password
       }
+      console.log('User ' + payload.email)
+      console.log('Password ' + payload.password)
       this.$store.dispatch('logInUser', payload)
         .then(() => {
           if (vm.isLoggedIn) {
